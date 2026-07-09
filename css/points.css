@@ -1,0 +1,144 @@
+.points-summary {
+    margin: 1rem 0 1.25rem;
+    padding: 1rem 1.15rem;
+    border: 1px solid rgba(255, 255, 255, .16);
+    border-radius: 18px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, .12), rgba(255, 255, 255, .04));
+    box-shadow: 0 16px 40px rgba(15, 23, 42, .10);
+}
+
+.points-summary strong {
+    font-size: 1.45rem
+}
+
+.points-label {
+    display: block;
+    color: var(--muted);
+    font-size: .85rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: .08em;
+}
+
+.points-meter {
+    height: 12px;
+    margin: .65rem 0;
+    background: rgba(15, 23, 42, .12);
+    border-radius: 999px;
+    overflow: hidden;
+}
+
+.points-meter span {
+    display: block;
+    height: 100%;
+    background: linear-gradient(90deg, #22c55e, #14b8a6);
+    border-radius: 999px;
+    transition: width .25s ease;
+}
+
+.points-summary p {
+    margin: .4rem 0 0;
+    color: var(--muted)
+}
+
+.day-complete {
+    margin-top: .85rem;
+    display: flex;
+    align-items: center;
+    gap: .6rem;
+    padding: .65rem .75rem;
+    border-radius: 14px;
+    background: rgba(255, 255, 255, .72);
+    border: 1px solid rgba(15, 23, 42, .10);
+    font-weight: 800;
+}
+
+.day-complete input {
+    width: 1.15rem;
+    height: 1.15rem;
+    accent-color: #14b8a6;
+}
+
+.day-complete strong {
+    margin-left: auto;
+    white-space: nowrap;
+    color: var(--muted);
+    font-size: .85rem;
+}
+
+.workout.completed {
+    outline: 2px solid rgba(20, 184, 166, .45);
+    background: linear-gradient(135deg, rgba(20, 184, 166, .13), rgba(255, 255, 255, .72));
+}
+
+.workout.completed .day-complete strong {
+    color: #0f766e
+}
+
+.workout {
+    display: flex;
+    flex-direction: column;
+}
+
+.workout {
+    display: flex;
+    flex-direction: column;
+}
+
+.day-complete {
+    margin-top: auto;
+    padding-top: .5rem;
+
+    display: grid;
+    grid-template-columns: 16px 1fr;
+    column-gap: .4rem;
+    row-gap: .15rem;
+
+    background: transparent;
+    border: 0;
+    border-radius: 0;
+
+    font-size: .8rem;
+    font-weight: 400;
+    line-height: 1.25;
+}
+
+.day-complete input[type="checkbox"] {
+    /* width: 14px;
+    height: 14px;
+    margin: 2px 0 0; */
+    accent-color: #14b8a6;
+}
+
+.day-complete span {
+    min-width: 0;
+    white-space: normal;
+    overflow-wrap: normal;
+    word-break: normal;
+}
+
+.day-complete strong {
+    grid-column: 2;
+    margin: 0;
+
+    font-size: .68rem;
+    font-weight: 500;
+    color: var(--muted);
+}
+
+.week-points-row {
+    margin-top: 1rem;
+}
+
+@media print {
+    .day-complete {
+        break-inside: avoid;
+        background: #fff
+    }
+
+    .points-summary {
+        box-shadow: none;
+        border: 1px solid #ddd;
+        background: #fff
+    }
+}

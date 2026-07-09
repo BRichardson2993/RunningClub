@@ -370,6 +370,7 @@ main {
   background: #fff;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   gap: 8px;
 }
 
@@ -382,7 +383,8 @@ main {
 
 .workout .type {
   font-weight: 950;
-  letter-spacing: -.02em
+  letter-spacing: -.02em;
+  font-size: .8rem;
 }
 
 .workout p {
@@ -460,11 +462,11 @@ main {
   font-weight: 850
 }
 
-input[type="checkbox"] {
+/* input[type="checkbox"] {
   width: 20px;
   height: 20px;
   accent-color: var(--brand)
-}
+} */
 
 .collapsed .week-body {
   display: none
@@ -508,12 +510,6 @@ input[type="checkbox"] {
   margin-top: 18px
 }
 
-.legend {
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap
-}
-
 .swatch {
   display: inline-block;
   width: 10px;
@@ -543,6 +539,10 @@ input[type="checkbox"] {
 
 .text-orange {
   color: #f59e0b;
+}
+
+.week-points-row {
+  margin-top: 1rem;
 }
 
 @media (max-width:900px) {

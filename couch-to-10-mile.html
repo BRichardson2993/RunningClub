@@ -6,15 +6,16 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Couch to 10 Miles Beginner Plan</title>
   <link rel="stylesheet" href="css/style.css">
+  <!-- <link rel="stylesheet" href="css/points.css"> -->
   <script src="https://kit.fontawesome.com/e6e1967a12.js" crossorigin="anonymous"></script>
 
 </head>
 
 <body>
   <header class="site-header">
-    <nav class="nav" aria-label="Main navigation">
+    <nav aria-label="Main navigation" class="nav">
       <a class="logo" href="index.html">
-        <span class="code">&lt;<i class="fa-solid fa-person-running"></i>/&gt;</span>&nbsp;<span>10 Miles by
+        <span class="code">&lt;<i class="fa-solid fa-person-running"></i>/&gt;</span> <span>10 Miles by
           November</span>
       </a>
       <div class="nav-links">
@@ -23,7 +24,6 @@
         <a href="couch-to-10-mile.html">Beginner Plan</a>
       </div>
     </nav>
-
     <section class="hero">
       <div class="hero-card">
         <p class="kicker">Beginner plan</p>
@@ -32,20 +32,21 @@
           same 10-mile goal week. Repeat weeks as needed if the jump feels too aggressive.</p>
         <div class="hero-actions">
           <a class="button primary" href="#plan">Jump to weeks</a>
-          <button class="button" data-print>Print plan</button>
+          <button class="button" data-print="">Print plan</button>
         </div>
       </div>
       <aside class="hero-side hero-card">
         <div class="stat-grid">
           <div class="stat"><b>20</b><span>Training weeks</span></div>
           <div class="stat"><b>5K</b><span>Built by week 6–7</span></div>
-          <div class="stat"><b><span data-complete-count>0</span></b><span>Weeks complete</span></div>
+          <div class="stat"><b><span data-total-points="">0</span></b><span>Total Points</span></div>
           <div class="stat"><b>10</b><span>Goal miles</span></div>
         </div>
         <div class="panel" style="box-shadow:none">
           <h3>Designed for true beginners</h3>
           <p>The early weeks use run/walk intervals, then gradually shift toward the same long-run outcome as the main
             plan.</p>
+          <p><b>Important!</b><br> Each run should begin and end with a 5 minute brisk walk for warm-up/cool down!</p>
         </div>
       </aside>
     </section>
@@ -57,15 +58,24 @@
         <span class="pill">Ends November 22, 2026</span>
       </div>
       <div class="toolbar-group">
-        <span class="pill"><button data-expand-all>Expand all</button></span>
-        <span class="pill"><button data-collapse-all>Collapse all</button></span>
-        <span class="pill"><button data-print>Print</button></span>
+        <span class="pill"><button data-expand-all="">Expand all</button></span>
+        <span class="pill"><button data-collapse-all="">Collapse all</button></span>
+        <span class="pill"><button data-print="">Print</button></span>
       </div>
     </div>
+    <div aria-live="polite" class="points-summary">
+      <div>
+        <span class="points-label">Training Points</span>
+        <strong><span data-total-points="">0</span> / <span data-max-points="">0</span></strong>
+      </div>
+      <div aria-label="Training points progress" class="points-meter">
+        <span data-points-meter="" style="width:0%"></span>
+      </div>
+      <p>Check off each day as you complete it. Your points are saved in this browser with localStorage.</p>
+    </div>
     <div class="week-grid">
-
       <section class="week-card" id="week-1">
-        <div class="week-top" data-toggle-week>
+        <div class="week-top" data-toggle-week="">
           <div class="week-title">
             <div class="week-number">1</div>
             <div>
@@ -86,56 +96,91 @@
               <div class="day">Mon</div>
               <div class="type">◦ Rest</div>
               <p>Full rest day or light mobility.</p>
+              <label class="day-complete">
+                <input data-day-check="beginner-week-1-mon-1" data-points="5" type="checkbox" />
+
+                <strong>5 pts</strong>
+              </label>
             </article>
             <article class="workout easy">
               <div class="day">Tue</div>
               <div class="type">● Run / Walk Session</div>
               <p>Run 1 min / walk 2 min × 8</p>
+              <label class="day-complete">
+                <input data-day-check="beginner-week-1-tue-2" data-points="15" type="checkbox" />
+
+                <strong>15 pts</strong>
+              </label>
             </article>
             <article class="workout cross">
               <div class="day">Wed</div>
               <div class="type">◆ Walk or Cross-Train</div>
               <p>Rest or walk</p>
+              <label class="day-complete">
+                <input data-day-check="beginner-week-1-wed-3" data-points="10" type="checkbox" />
+
+                <strong>10 pts</strong>
+              </label>
             </article>
             <article class="workout easy">
               <div class="day">Thu</div>
               <div class="type">● Easy Session</div>
               <p>Run 1 min / walk 2 min × 8</p>
+              <label class="day-complete">
+                <input data-day-check="beginner-week-1-thu-4" data-points="15" type="checkbox" />
+
+                <strong>15 pts</strong>
+              </label>
             </article>
             <article class="workout rest">
               <div class="day">Fri</div>
               <div class="type">◦ Rest</div>
               <p>Rest</p>
+              <label class="day-complete">
+                <input data-day-check="beginner-week-1-fri-5" data-points="5" type="checkbox" />
+
+                <strong>5 pts</strong>
+              </label>
             </article>
             <article class="workout easy">
               <div class="day">Sat</div>
               <div class="type">● Recovery Session</div>
               <p>Run 1 min / walk 2 min × 8</p>
+              <label class="day-complete">
+                <input data-day-check="beginner-week-1-sat-6" data-points="15" type="checkbox" />
+
+                <strong>15 pts</strong>
+              </label>
             </article>
             <article class="workout long">
               <div class="day">Sun</div>
               <div class="type">★ Long Run / Run-Walk</div>
               <p>2.0 mi run/walk</p>
+              <label class="day-complete">
+                <input data-day-check="beginner-week-1-sun-7" data-points="25" type="checkbox" />
+
+                <strong>25 pts</strong>
+              </label>
             </article>
           </div>
           <div class="week-notes">
             <div class="note"><strong>Speed / interval option</strong>Use a comfortable run/walk effort; walking breaks
               are encouraged.</div>
-            <div class="note"><strong>Coach's tip</strong>Repeat any week if your shins, knees, or breathing feel
+            <div class="note"><strong>Helpful Tip</strong>Repeat any week if your shins, knees, or breathing feel
               overwhelmed.</div>
           </div>
-          <div class="progress-wrap" aria-label="Progress toward 10-mile long run">
+          <div aria-label="Progress toward 10-mile long run" class="progress-wrap">
             <div class="progress-bar" style="width:20%"></div>
           </div>
-          <div class="check-row">
-            <label><input type="checkbox" data-week-check="beginner-1"> Mark week complete</label>
-            <span class="pill">20% of 10-mile goal</span>
+
+          <div class="week-points-row">
+            <span class="pill"><span data-week-points="week-1">0</span> / 90 points earned this week</span>
+            <span class="pill">Daily checkboxes save automatically</span>
           </div>
         </div>
       </section>
-
       <section class="week-card" id="week-2">
-        <div class="week-top" data-toggle-week>
+        <div class="week-top" data-toggle-week="">
           <div class="week-title">
             <div class="week-number">2</div>
             <div>
@@ -156,55 +201,90 @@
               <div class="day">Mon</div>
               <div class="type">◦ Rest</div>
               <p>Full rest day or light mobility.</p>
+              <label class="day-complete">
+                <input data-day-check="beginner-week-2-mon-1" data-points="5" type="checkbox" />
+
+                <strong>5 pts</strong>
+              </label>
             </article>
             <article class="workout easy">
               <div class="day">Tue</div>
               <div class="type">● Run / Walk Session</div>
               <p>Run 90 sec / walk 2 min × 8</p>
+              <label class="day-complete">
+                <input data-day-check="beginner-week-2-tue-2" data-points="15" type="checkbox" />
+
+                <strong>15 pts</strong>
+              </label>
             </article>
             <article class="workout cross">
               <div class="day">Wed</div>
               <div class="type">◆ Walk or Cross-Train</div>
               <p>Walk or cross-train</p>
+              <label class="day-complete">
+                <input data-day-check="beginner-week-2-wed-3" data-points="10" type="checkbox" />
+
+                <strong>10 pts</strong>
+              </label>
             </article>
             <article class="workout easy">
               <div class="day">Thu</div>
               <div class="type">● Easy Session</div>
               <p>Run 90 sec / walk 2 min × 8</p>
+              <label class="day-complete">
+                <input data-day-check="beginner-week-2-thu-4" data-points="15" type="checkbox" />
+
+                <strong>15 pts</strong>
+              </label>
             </article>
             <article class="workout rest">
               <div class="day">Fri</div>
               <div class="type">◦ Rest</div>
               <p>Rest</p>
+              <label class="day-complete">
+                <input data-day-check="beginner-week-2-fri-5" data-points="5" type="checkbox" />
+
+                <strong>5 pts</strong>
+              </label>
             </article>
             <article class="workout easy">
               <div class="day">Sat</div>
               <div class="type">● Recovery Session</div>
               <p>Run 90 sec / walk 2 min × 8</p>
+              <label class="day-complete">
+                <input data-day-check="beginner-week-2-sat-6" data-points="15" type="checkbox" />
+
+                <strong>15 pts</strong>
+              </label>
             </article>
             <article class="workout long">
               <div class="day">Sun</div>
               <div class="type">★ Long Run / Run-Walk</div>
               <p>2.3 mi run/walk</p>
+              <label class="day-complete">
+                <input data-day-check="beginner-week-2-sun-7" data-points="25" type="checkbox" />
+
+                <strong>25 pts</strong>
+              </label>
             </article>
           </div>
           <div class="week-notes">
             <div class="note"><strong>Speed / interval option</strong>Use a comfortable run/walk effort; walking breaks
               are encouraged.</div>
-            <div class="note"><strong>Coach's tip</strong>Keep run segments relaxed. Speed does not matter yet.</div>
+            <div class="note"><strong>Helpful Tip</strong>Keep run segments relaxed. Speed does not matter yet.</div>
           </div>
-          <div class="progress-wrap" aria-label="Progress toward 10-mile long run">
+          <div aria-label="Progress toward 10-mile long run" class="progress-wrap">
             <div class="progress-bar" style="width:23%"></div>
           </div>
-          <div class="check-row">
-            <label><input type="checkbox" data-week-check="beginner-2"> Mark week complete</label>
-            <span class="pill">23% of 10-mile goal</span>
+
+          <div class="week-points-row">
+            <span class="pill"><span data-week-points="week-2">0</span> / 90 points earned this week</span>
+            <span class="pill">Daily checkboxes save automatically</span>
           </div>
         </div>
       </section>
-
       <section class="week-card" id="week-3">
-        <div class="week-top" data-toggle-week>
+        <div class="week-top" data-toggle-week="">
           <div class="week-title">
             <div class="week-number">3</div>
             <div>
@@ -225,56 +305,91 @@
               <div class="day">Mon</div>
               <div class="type">◦ Rest</div>
               <p>Full rest day or light mobility.</p>
+              <label class="day-complete">
+                <input data-day-check="beginner-week-3-mon-1" data-points="5" type="checkbox" />
+
+                <strong>5 pts</strong>
+              </label>
             </article>
             <article class="workout easy">
               <div class="day">Tue</div>
               <div class="type">● Run / Walk Session</div>
               <p>Run 3 min / walk 2 min × 6</p>
+              <label class="day-complete">
+                <input data-day-check="beginner-week-3-tue-2" data-points="15" type="checkbox" />
+
+                <strong>15 pts</strong>
+              </label>
             </article>
             <article class="workout cross">
               <div class="day">Wed</div>
               <div class="type">◆ Walk or Cross-Train</div>
               <p>Walk or cross-train</p>
+              <label class="day-complete">
+                <input data-day-check="beginner-week-3-wed-3" data-points="10" type="checkbox" />
+
+                <strong>10 pts</strong>
+              </label>
             </article>
             <article class="workout easy">
               <div class="day">Thu</div>
               <div class="type">● Easy Session</div>
               <p>Run 3 min / walk 2 min × 6</p>
+              <label class="day-complete">
+                <input data-day-check="beginner-week-3-thu-4" data-points="15" type="checkbox" />
+
+                <strong>15 pts</strong>
+              </label>
             </article>
             <article class="workout rest">
               <div class="day">Fri</div>
               <div class="type">◦ Rest</div>
               <p>Rest</p>
+              <label class="day-complete">
+                <input data-day-check="beginner-week-3-fri-5" data-points="5" type="checkbox" />
+
+                <strong>5 pts</strong>
+              </label>
             </article>
             <article class="workout easy">
               <div class="day">Sat</div>
               <div class="type">● Recovery Session</div>
               <p>Run 4 min / walk 2 min × 5</p>
+              <label class="day-complete">
+                <input data-day-check="beginner-week-3-sat-6" data-points="15" type="checkbox" />
+
+                <strong>15 pts</strong>
+              </label>
             </article>
             <article class="workout long">
               <div class="day">Sun</div>
               <div class="type">★ Long Run / Run-Walk</div>
               <p>2.6 mi run/walk</p>
+              <label class="day-complete">
+                <input data-day-check="beginner-week-3-sun-7" data-points="25" type="checkbox" />
+
+                <strong>25 pts</strong>
+              </label>
             </article>
           </div>
           <div class="week-notes">
             <div class="note"><strong>Speed / interval option</strong>Use a comfortable run/walk effort; walking breaks
               are encouraged.</div>
-            <div class="note"><strong>Coach's tip</strong>Use the walk breaks early. They are training, not cheating.
+            <div class="note"><strong>Helpful Tip</strong>Use the walk breaks early. They are training, not cheating.
             </div>
           </div>
-          <div class="progress-wrap" aria-label="Progress toward 10-mile long run">
+          <div aria-label="Progress toward 10-mile long run" class="progress-wrap">
             <div class="progress-bar" style="width:26%"></div>
           </div>
-          <div class="check-row">
-            <label><input type="checkbox" data-week-check="beginner-3"> Mark week complete</label>
-            <span class="pill">26% of 10-mile goal</span>
+
+          <div class="week-points-row">
+            <span class="pill"><span data-week-points="week-3">0</span> / 90 points earned this week</span>
+            <span class="pill">Daily checkboxes save automatically</span>
           </div>
         </div>
       </section>
-
       <section class="week-card" id="week-4">
-        <div class="week-top" data-toggle-week>
+        <div class="week-top" data-toggle-week="">
           <div class="week-title">
             <div class="week-number">4</div>
             <div>
@@ -295,55 +410,90 @@
               <div class="day">Mon</div>
               <div class="type">◦ Rest</div>
               <p>Full rest day or light mobility.</p>
+              <label class="day-complete">
+                <input data-day-check="beginner-week-4-mon-1" data-points="5" type="checkbox" />
+
+                <strong>5 pts</strong>
+              </label>
             </article>
             <article class="workout easy">
               <div class="day">Tue</div>
               <div class="type">● Run / Walk Session</div>
               <p>Run 5 min / walk 2 min × 5</p>
+              <label class="day-complete">
+                <input data-day-check="beginner-week-4-tue-2" data-points="15" type="checkbox" />
+
+                <strong>15 pts</strong>
+              </label>
             </article>
             <article class="workout cross">
               <div class="day">Wed</div>
               <div class="type">◆ Walk or Cross-Train</div>
               <p>Walk or cross-train</p>
+              <label class="day-complete">
+                <input data-day-check="beginner-week-4-wed-3" data-points="10" type="checkbox" />
+
+                <strong>10 pts</strong>
+              </label>
             </article>
             <article class="workout easy">
               <div class="day">Thu</div>
               <div class="type">● Easy Session</div>
               <p>Run 6 min / walk 2 min × 4</p>
+              <label class="day-complete">
+                <input data-day-check="beginner-week-4-thu-4" data-points="15" type="checkbox" />
+
+                <strong>15 pts</strong>
+              </label>
             </article>
             <article class="workout rest">
               <div class="day">Fri</div>
               <div class="type">◦ Rest</div>
               <p>Rest</p>
+              <label class="day-complete">
+                <input data-day-check="beginner-week-4-fri-5" data-points="5" type="checkbox" />
+
+                <strong>5 pts</strong>
+              </label>
             </article>
             <article class="workout easy">
               <div class="day">Sat</div>
               <div class="type">● Recovery Session</div>
               <p>Run 8 min / walk 2 min × 3</p>
+              <label class="day-complete">
+                <input data-day-check="beginner-week-4-sat-6" data-points="15" type="checkbox" />
+
+                <strong>15 pts</strong>
+              </label>
             </article>
             <article class="workout long">
               <div class="day">Sun</div>
               <div class="type">★ Long Run / Run-Walk</div>
               <p>3.0 mi run/walk</p>
+              <label class="day-complete">
+                <input data-day-check="beginner-week-4-sun-7" data-points="25" type="checkbox" />
+
+                <strong>25 pts</strong>
+              </label>
             </article>
           </div>
           <div class="week-notes">
             <div class="note"><strong>Speed / interval option</strong>Use a comfortable run/walk effort; walking breaks
               are encouraged.</div>
-            <div class="note"><strong>Coach's tip</strong>Try to finish each run feeling proud, not wrecked.</div>
+            <div class="note"><strong>Helpful Tip</strong>Try to finish each run feeling proud, not wrecked.</div>
           </div>
-          <div class="progress-wrap" aria-label="Progress toward 10-mile long run">
+          <div aria-label="Progress toward 10-mile long run" class="progress-wrap">
             <div class="progress-bar" style="width:30%"></div>
           </div>
-          <div class="check-row">
-            <label><input type="checkbox" data-week-check="beginner-4"> Mark week complete</label>
-            <span class="pill">30% of 10-mile goal</span>
+
+          <div class="week-points-row">
+            <span class="pill"><span data-week-points="week-4">0</span> / 90 points earned this week</span>
+            <span class="pill">Daily checkboxes save automatically</span>
           </div>
         </div>
       </section>
-
       <section class="week-card" id="week-5">
-        <div class="week-top" data-toggle-week>
+        <div class="week-top" data-toggle-week="">
           <div class="week-title">
             <div class="week-number">5</div>
             <div>
@@ -364,56 +514,91 @@
               <div class="day">Mon</div>
               <div class="type">◦ Rest</div>
               <p>Full rest day or light mobility.</p>
+              <label class="day-complete">
+                <input data-day-check="beginner-week-5-mon-1" data-points="5" type="checkbox" />
+
+                <strong>5 pts</strong>
+              </label>
             </article>
             <article class="workout easy">
               <div class="day">Tue</div>
               <div class="type">● Run / Walk Session</div>
               <p>20-minute easy run</p>
+              <label class="day-complete">
+                <input data-day-check="beginner-week-5-tue-2" data-points="15" type="checkbox" />
+
+                <strong>15 pts</strong>
+              </label>
             </article>
             <article class="workout cross">
               <div class="day">Wed</div>
               <div class="type">◆ Walk or Cross-Train</div>
               <p>Walk or cross-train</p>
+              <label class="day-complete">
+                <input data-day-check="beginner-week-5-wed-3" data-points="10" type="checkbox" />
+
+                <strong>10 pts</strong>
+              </label>
             </article>
             <article class="workout easy">
               <div class="day">Thu</div>
               <div class="type">● Easy Session</div>
               <p>Run 10 min / walk 2 min × 3</p>
+              <label class="day-complete">
+                <input data-day-check="beginner-week-5-thu-4" data-points="15" type="checkbox" />
+
+                <strong>15 pts</strong>
+              </label>
             </article>
             <article class="workout rest">
               <div class="day">Fri</div>
               <div class="type">◦ Rest</div>
               <p>Rest</p>
+              <label class="day-complete">
+                <input data-day-check="beginner-week-5-fri-5" data-points="5" type="checkbox" />
+
+                <strong>5 pts</strong>
+              </label>
             </article>
             <article class="workout easy">
               <div class="day">Sat</div>
               <div class="type">● Recovery Session</div>
               <p>25-minute easy run</p>
+              <label class="day-complete">
+                <input data-day-check="beginner-week-5-sat-6" data-points="15" type="checkbox" />
+
+                <strong>15 pts</strong>
+              </label>
             </article>
             <article class="workout long">
               <div class="day">Sun</div>
               <div class="type">★ Long Run / Run-Walk</div>
               <p>3.2 mi long run/walk</p>
+              <label class="day-complete">
+                <input data-day-check="beginner-week-5-sun-7" data-points="25" type="checkbox" />
+
+                <strong>25 pts</strong>
+              </label>
             </article>
           </div>
           <div class="week-notes">
             <div class="note"><strong>Speed / interval option</strong>Use a comfortable run/walk effort; walking breaks
               are encouraged.</div>
-            <div class="note"><strong>Coach's tip</strong>Your first continuous run is about patience. Slow down early.
+            <div class="note"><strong>Helpful Tip</strong>Your first continuous run is about patience. Slow down early.
             </div>
           </div>
-          <div class="progress-wrap" aria-label="Progress toward 10-mile long run">
+          <div aria-label="Progress toward 10-mile long run" class="progress-wrap">
             <div class="progress-bar" style="width:32%"></div>
           </div>
-          <div class="check-row">
-            <label><input type="checkbox" data-week-check="beginner-5"> Mark week complete</label>
-            <span class="pill">32% of 10-mile goal</span>
+
+          <div class="week-points-row">
+            <span class="pill"><span data-week-points="week-5">0</span> / 90 points earned this week</span>
+            <span class="pill">Daily checkboxes save automatically</span>
           </div>
         </div>
       </section>
-
       <section class="week-card" id="week-6">
-        <div class="week-top" data-toggle-week>
+        <div class="week-top" data-toggle-week="">
           <div class="week-title">
             <div class="week-number">6</div>
             <div>
@@ -434,55 +619,90 @@
               <div class="day">Mon</div>
               <div class="type">◦ Rest</div>
               <p>Full rest day or light mobility.</p>
+              <label class="day-complete">
+                <input data-day-check="beginner-week-6-mon-1" data-points="5" type="checkbox" />
+
+                <strong>5 pts</strong>
+              </label>
             </article>
             <article class="workout easy">
               <div class="day">Tue</div>
               <div class="type">● Run / Walk Session</div>
               <p>25-minute easy run</p>
+              <label class="day-complete">
+                <input data-day-check="beginner-week-6-tue-2" data-points="15" type="checkbox" />
+
+                <strong>15 pts</strong>
+              </label>
             </article>
             <article class="workout cross">
               <div class="day">Wed</div>
               <div class="type">◆ Walk or Cross-Train</div>
               <p>Walk or cross-train</p>
+              <label class="day-complete">
+                <input data-day-check="beginner-week-6-wed-3" data-points="10" type="checkbox" />
+
+                <strong>10 pts</strong>
+              </label>
             </article>
             <article class="workout easy">
               <div class="day">Thu</div>
               <div class="type">● Easy Session</div>
               <p>30-minute easy run</p>
+              <label class="day-complete">
+                <input data-day-check="beginner-week-6-thu-4" data-points="15" type="checkbox" />
+
+                <strong>15 pts</strong>
+              </label>
             </article>
             <article class="workout rest">
               <div class="day">Fri</div>
               <div class="type">◦ Rest</div>
               <p>Rest</p>
+              <label class="day-complete">
+                <input data-day-check="beginner-week-6-fri-5" data-points="5" type="checkbox" />
+
+                <strong>5 pts</strong>
+              </label>
             </article>
             <article class="workout easy">
               <div class="day">Sat</div>
               <div class="type">● Recovery Session</div>
               <p>Easy shakeout</p>
+              <label class="day-complete">
+                <input data-day-check="beginner-week-6-sat-6" data-points="15" type="checkbox" />
+
+                <strong>15 pts</strong>
+              </label>
             </article>
             <article class="workout long">
               <div class="day">Sun</div>
               <div class="type">★ Long Run / Run-Walk</div>
               <p>5K / 3.1 mi effort</p>
+              <label class="day-complete">
+                <input data-day-check="beginner-week-6-sun-7" data-points="25" type="checkbox" />
+
+                <strong>25 pts</strong>
+              </label>
             </article>
           </div>
           <div class="week-notes">
             <div class="note"><strong>Speed / interval option</strong>Use a comfortable run/walk effort; walking breaks
               are encouraged.</div>
-            <div class="note"><strong>Coach's tip</strong>Five kilometers is close. Keep the effort controlled.</div>
+            <div class="note"><strong>Helpful Tip</strong>Five kilometers is close. Keep the effort controlled.</div>
           </div>
-          <div class="progress-wrap" aria-label="Progress toward 10-mile long run">
+          <div aria-label="Progress toward 10-mile long run" class="progress-wrap">
             <div class="progress-bar" style="width:31%"></div>
           </div>
-          <div class="check-row">
-            <label><input type="checkbox" data-week-check="beginner-6"> Mark week complete</label>
-            <span class="pill">31% of 10-mile goal</span>
+
+          <div class="week-points-row">
+            <span class="pill"><span data-week-points="week-6">0</span> / 90 points earned this week</span>
+            <span class="pill">Daily checkboxes save automatically</span>
           </div>
         </div>
       </section>
-
       <section class="week-card" id="week-7">
-        <div class="week-top" data-toggle-week>
+        <div class="week-top" data-toggle-week="">
           <div class="week-title">
             <div class="week-number">7</div>
             <div>
@@ -503,56 +723,91 @@
               <div class="day">Mon</div>
               <div class="type">◦ Rest</div>
               <p>Full rest day or light mobility.</p>
+              <label class="day-complete">
+                <input data-day-check="beginner-week-7-mon-1" data-points="5" type="checkbox" />
+
+                <strong>5 pts</strong>
+              </label>
             </article>
             <article class="workout easy">
               <div class="day">Tue</div>
               <div class="type">● Run / Walk Session</div>
               <p>30-minute easy run</p>
+              <label class="day-complete">
+                <input data-day-check="beginner-week-7-tue-2" data-points="15" type="checkbox" />
+
+                <strong>15 pts</strong>
+              </label>
             </article>
             <article class="workout cross">
               <div class="day">Wed</div>
               <div class="type">◆ Walk or Cross-Train</div>
               <p>Cross-train</p>
+              <label class="day-complete">
+                <input data-day-check="beginner-week-7-wed-3" data-points="10" type="checkbox" />
+
+                <strong>10 pts</strong>
+              </label>
             </article>
             <article class="workout easy">
               <div class="day">Thu</div>
               <div class="type">● Easy Session</div>
               <p>2.5 mi easy run</p>
+              <label class="day-complete">
+                <input data-day-check="beginner-week-7-thu-4" data-points="15" type="checkbox" />
+
+                <strong>15 pts</strong>
+              </label>
             </article>
             <article class="workout rest">
               <div class="day">Fri</div>
               <div class="type">◦ Rest</div>
               <p>Rest</p>
+              <label class="day-complete">
+                <input data-day-check="beginner-week-7-fri-5" data-points="5" type="checkbox" />
+
+                <strong>5 pts</strong>
+              </label>
             </article>
             <article class="workout easy">
               <div class="day">Sat</div>
               <div class="type">● Recovery Session</div>
               <p>2 mi recovery</p>
+              <label class="day-complete">
+                <input data-day-check="beginner-week-7-sat-6" data-points="15" type="checkbox" />
+
+                <strong>15 pts</strong>
+              </label>
             </article>
             <article class="workout long">
               <div class="day">Sun</div>
               <div class="type">★ Long Run / Run-Walk</div>
               <p>3.5 mi long run</p>
+              <label class="day-complete">
+                <input data-day-check="beginner-week-7-sun-7" data-points="25" type="checkbox" />
+
+                <strong>25 pts</strong>
+              </label>
             </article>
           </div>
           <div class="week-notes">
             <div class="note"><strong>Speed / interval option</strong>Use a comfortable run/walk effort; walking breaks
               are encouraged.</div>
-            <div class="note"><strong>Coach's tip</strong>After this week, you should be ready to blend into longer easy
+            <div class="note"><strong>Helpful Tip</strong>After this week, you should be ready to blend into longer easy
               running.</div>
           </div>
-          <div class="progress-wrap" aria-label="Progress toward 10-mile long run">
+          <div aria-label="Progress toward 10-mile long run" class="progress-wrap">
             <div class="progress-bar" style="width:35%"></div>
           </div>
-          <div class="check-row">
-            <label><input type="checkbox" data-week-check="beginner-7"> Mark week complete</label>
-            <span class="pill">35% of 10-mile goal</span>
+
+          <div class="week-points-row">
+            <span class="pill"><span data-week-points="week-7">0</span> / 90 points earned this week</span>
+            <span class="pill">Daily checkboxes save automatically</span>
           </div>
         </div>
       </section>
-
       <section class="week-card" id="week-8">
-        <div class="week-top" data-toggle-week>
+        <div class="week-top" data-toggle-week="">
           <div class="week-title">
             <div class="week-number">8</div>
             <div>
@@ -573,55 +828,90 @@
               <div class="day">Mon</div>
               <div class="type">◦ Rest</div>
               <p>Full rest day or light mobility.</p>
+              <label class="day-complete">
+                <input data-day-check="beginner-week-8-mon-1" data-points="5" type="checkbox" />
+
+                <strong>5 pts</strong>
+              </label>
             </article>
             <article class="workout easy">
               <div class="day">Tue</div>
               <div class="type">● Run / Walk Session</div>
               <p>2.5 mi easy run</p>
+              <label class="day-complete">
+                <input data-day-check="beginner-week-8-tue-2" data-points="15" type="checkbox" />
+
+                <strong>15 pts</strong>
+              </label>
             </article>
             <article class="workout cross">
               <div class="day">Wed</div>
               <div class="type">◆ Walk or Cross-Train</div>
               <p>Cross-train</p>
+              <label class="day-complete">
+                <input data-day-check="beginner-week-8-wed-3" data-points="10" type="checkbox" />
+
+                <strong>10 pts</strong>
+              </label>
             </article>
             <article class="workout easy">
               <div class="day">Thu</div>
               <div class="type">● Easy Session</div>
               <p>2.5 mi easy run</p>
+              <label class="day-complete">
+                <input data-day-check="beginner-week-8-thu-4" data-points="15" type="checkbox" />
+
+                <strong>15 pts</strong>
+              </label>
             </article>
             <article class="workout rest">
               <div class="day">Fri</div>
               <div class="type">◦ Rest</div>
               <p>Rest</p>
+              <label class="day-complete">
+                <input data-day-check="beginner-week-8-fri-5" data-points="5" type="checkbox" />
+
+                <strong>5 pts</strong>
+              </label>
             </article>
             <article class="workout easy">
               <div class="day">Sat</div>
               <div class="type">● Recovery Session</div>
               <p>2 mi recovery</p>
+              <label class="day-complete">
+                <input data-day-check="beginner-week-8-sat-6" data-points="15" type="checkbox" />
+
+                <strong>15 pts</strong>
+              </label>
             </article>
             <article class="workout long">
               <div class="day">Sun</div>
               <div class="type">★ Long Run / Run-Walk</div>
               <p>4.0 mi long run</p>
+              <label class="day-complete">
+                <input data-day-check="beginner-week-8-sun-7" data-points="25" type="checkbox" />
+
+                <strong>25 pts</strong>
+              </label>
             </article>
           </div>
           <div class="week-notes">
             <div class="note"><strong>Speed / interval option</strong>Use a comfortable run/walk effort; walking breaks
               are encouraged.</div>
-            <div class="note"><strong>Coach's tip</strong>Add distance gently. Walk breaks are still allowed.</div>
+            <div class="note"><strong>Helpful Tip</strong>Add distance gently. Walk breaks are still allowed.</div>
           </div>
-          <div class="progress-wrap" aria-label="Progress toward 10-mile long run">
+          <div aria-label="Progress toward 10-mile long run" class="progress-wrap">
             <div class="progress-bar" style="width:40%"></div>
           </div>
-          <div class="check-row">
-            <label><input type="checkbox" data-week-check="beginner-8"> Mark week complete</label>
-            <span class="pill">40% of 10-mile goal</span>
+
+          <div class="week-points-row">
+            <span class="pill"><span data-week-points="week-8">0</span> / 90 points earned this week</span>
+            <span class="pill">Daily checkboxes save automatically</span>
           </div>
         </div>
       </section>
-
       <section class="week-card" id="week-9">
-        <div class="week-top" data-toggle-week>
+        <div class="week-top" data-toggle-week="">
           <div class="week-title">
             <div class="week-number">9</div>
             <div>
@@ -642,55 +932,90 @@
               <div class="day">Mon</div>
               <div class="type">◦ Rest</div>
               <p>Full rest day or light mobility.</p>
+              <label class="day-complete">
+                <input data-day-check="beginner-week-9-mon-1" data-points="5" type="checkbox" />
+
+                <strong>5 pts</strong>
+              </label>
             </article>
             <article class="workout easy">
               <div class="day">Tue</div>
               <div class="type">● Run / Walk Session</div>
               <p>3 mi easy run</p>
+              <label class="day-complete">
+                <input data-day-check="beginner-week-9-tue-2" data-points="15" type="checkbox" />
+
+                <strong>15 pts</strong>
+              </label>
             </article>
             <article class="workout cross">
               <div class="day">Wed</div>
               <div class="type">◆ Walk or Cross-Train</div>
               <p>Cross-train</p>
+              <label class="day-complete">
+                <input data-day-check="beginner-week-9-wed-3" data-points="10" type="checkbox" />
+
+                <strong>10 pts</strong>
+              </label>
             </article>
             <article class="workout easy">
               <div class="day">Thu</div>
               <div class="type">● Easy Session</div>
               <p>2.5 mi easy run</p>
+              <label class="day-complete">
+                <input data-day-check="beginner-week-9-thu-4" data-points="15" type="checkbox" />
+
+                <strong>15 pts</strong>
+              </label>
             </article>
             <article class="workout rest">
               <div class="day">Fri</div>
               <div class="type">◦ Rest</div>
               <p>Rest</p>
+              <label class="day-complete">
+                <input data-day-check="beginner-week-9-fri-5" data-points="5" type="checkbox" />
+
+                <strong>5 pts</strong>
+              </label>
             </article>
             <article class="workout easy">
               <div class="day">Sat</div>
               <div class="type">● Recovery Session</div>
               <p>2 mi recovery</p>
+              <label class="day-complete">
+                <input data-day-check="beginner-week-9-sat-6" data-points="15" type="checkbox" />
+
+                <strong>15 pts</strong>
+              </label>
             </article>
             <article class="workout long">
               <div class="day">Sun</div>
               <div class="type">★ Long Run / Run-Walk</div>
               <p>4.5 mi long run</p>
+              <label class="day-complete">
+                <input data-day-check="beginner-week-9-sun-7" data-points="25" type="checkbox" />
+
+                <strong>25 pts</strong>
+              </label>
             </article>
           </div>
           <div class="week-notes">
             <div class="note"><strong>Speed / interval option</strong>Use a comfortable run/walk effort; walking breaks
               are encouraged.</div>
-            <div class="note"><strong>Coach's tip</strong>Think time on feet. The long run can be run/walk.</div>
+            <div class="note"><strong>Helpful Tip</strong>Think time on feet. The long run can be run/walk.</div>
           </div>
-          <div class="progress-wrap" aria-label="Progress toward 10-mile long run">
+          <div aria-label="Progress toward 10-mile long run" class="progress-wrap">
             <div class="progress-bar" style="width:45%"></div>
           </div>
-          <div class="check-row">
-            <label><input type="checkbox" data-week-check="beginner-9"> Mark week complete</label>
-            <span class="pill">45% of 10-mile goal</span>
+
+          <div class="week-points-row">
+            <span class="pill"><span data-week-points="week-9">0</span> / 90 points earned this week</span>
+            <span class="pill">Daily checkboxes save automatically</span>
           </div>
         </div>
       </section>
-
       <section class="week-card" id="week-10">
-        <div class="week-top" data-toggle-week>
+        <div class="week-top" data-toggle-week="">
           <div class="week-title">
             <div class="week-number">10</div>
             <div>
@@ -711,56 +1036,91 @@
               <div class="day">Mon</div>
               <div class="type">◦ Rest</div>
               <p>Full rest day or light mobility.</p>
+              <label class="day-complete">
+                <input data-day-check="beginner-week-10-mon-1" data-points="5" type="checkbox" />
+
+                <strong>5 pts</strong>
+              </label>
             </article>
             <article class="workout easy">
               <div class="day">Tue</div>
               <div class="type">● Run / Walk Session</div>
               <p>3 mi easy run</p>
+              <label class="day-complete">
+                <input data-day-check="beginner-week-10-tue-2" data-points="15" type="checkbox" />
+
+                <strong>15 pts</strong>
+              </label>
             </article>
             <article class="workout cross">
               <div class="day">Wed</div>
               <div class="type">◆ Walk or Cross-Train</div>
               <p>Cross-train</p>
+              <label class="day-complete">
+                <input data-day-check="beginner-week-10-wed-3" data-points="10" type="checkbox" />
+
+                <strong>10 pts</strong>
+              </label>
             </article>
             <article class="workout easy">
               <div class="day">Thu</div>
               <div class="type">● Easy Session</div>
               <p>3 mi easy run</p>
+              <label class="day-complete">
+                <input data-day-check="beginner-week-10-thu-4" data-points="15" type="checkbox" />
+
+                <strong>15 pts</strong>
+              </label>
             </article>
             <article class="workout rest">
               <div class="day">Fri</div>
               <div class="type">◦ Rest</div>
               <p>Rest</p>
+              <label class="day-complete">
+                <input data-day-check="beginner-week-10-fri-5" data-points="5" type="checkbox" />
+
+                <strong>5 pts</strong>
+              </label>
             </article>
             <article class="workout easy">
               <div class="day">Sat</div>
               <div class="type">● Recovery Session</div>
               <p>2 mi recovery</p>
+              <label class="day-complete">
+                <input data-day-check="beginner-week-10-sat-6" data-points="15" type="checkbox" />
+
+                <strong>15 pts</strong>
+              </label>
             </article>
             <article class="workout long">
               <div class="day">Sun</div>
               <div class="type">★ Long Run / Run-Walk</div>
               <p>5.0 mi long run</p>
+              <label class="day-complete">
+                <input data-day-check="beginner-week-10-sun-7" data-points="25" type="checkbox" />
+
+                <strong>25 pts</strong>
+              </label>
             </article>
           </div>
           <div class="week-notes">
             <div class="note"><strong>Speed / interval option</strong>Use a comfortable run/walk effort; walking breaks
               are encouraged.</div>
-            <div class="note"><strong>Coach's tip</strong>Practice an easy fueling routine for anything over 60 minutes.
+            <div class="note"><strong>Helpful Tip</strong>Practice an easy fueling routine for anything over 60 minutes.
             </div>
           </div>
-          <div class="progress-wrap" aria-label="Progress toward 10-mile long run">
+          <div aria-label="Progress toward 10-mile long run" class="progress-wrap">
             <div class="progress-bar" style="width:50%"></div>
           </div>
-          <div class="check-row">
-            <label><input type="checkbox" data-week-check="beginner-10"> Mark week complete</label>
-            <span class="pill">50% of 10-mile goal</span>
+
+          <div class="week-points-row">
+            <span class="pill"><span data-week-points="week-10">0</span> / 90 points earned this week</span>
+            <span class="pill">Daily checkboxes save automatically</span>
           </div>
         </div>
       </section>
-
       <section class="week-card" id="week-11">
-        <div class="week-top" data-toggle-week>
+        <div class="week-top" data-toggle-week="">
           <div class="week-title">
             <div class="week-number">11</div>
             <div>
@@ -781,55 +1141,90 @@
               <div class="day">Mon</div>
               <div class="type">◦ Rest</div>
               <p>Full rest day or light mobility.</p>
+              <label class="day-complete">
+                <input data-day-check="beginner-week-11-mon-1" data-points="5" type="checkbox" />
+
+                <strong>5 pts</strong>
+              </label>
             </article>
             <article class="workout easy">
               <div class="day">Tue</div>
               <div class="type">● Run / Walk Session</div>
               <p>2.5 mi easy run</p>
+              <label class="day-complete">
+                <input data-day-check="beginner-week-11-tue-2" data-points="15" type="checkbox" />
+
+                <strong>15 pts</strong>
+              </label>
             </article>
             <article class="workout cross">
               <div class="day">Wed</div>
               <div class="type">◆ Walk or Cross-Train</div>
               <p>Cross-train</p>
+              <label class="day-complete">
+                <input data-day-check="beginner-week-11-wed-3" data-points="10" type="checkbox" />
+
+                <strong>10 pts</strong>
+              </label>
             </article>
             <article class="workout easy">
               <div class="day">Thu</div>
               <div class="type">● Easy Session</div>
               <p>2.5 mi easy run</p>
+              <label class="day-complete">
+                <input data-day-check="beginner-week-11-thu-4" data-points="15" type="checkbox" />
+
+                <strong>15 pts</strong>
+              </label>
             </article>
             <article class="workout rest">
               <div class="day">Fri</div>
               <div class="type">◦ Rest</div>
               <p>Rest</p>
+              <label class="day-complete">
+                <input data-day-check="beginner-week-11-fri-5" data-points="5" type="checkbox" />
+
+                <strong>5 pts</strong>
+              </label>
             </article>
             <article class="workout easy">
               <div class="day">Sat</div>
               <div class="type">● Recovery Session</div>
               <p>2 mi recovery</p>
+              <label class="day-complete">
+                <input data-day-check="beginner-week-11-sat-6" data-points="15" type="checkbox" />
+
+                <strong>15 pts</strong>
+              </label>
             </article>
             <article class="workout long">
               <div class="day">Sun</div>
               <div class="type">★ Long Run / Run-Walk</div>
               <p>4.0 mi long run</p>
+              <label class="day-complete">
+                <input data-day-check="beginner-week-11-sun-7" data-points="25" type="checkbox" />
+
+                <strong>25 pts</strong>
+              </label>
             </article>
           </div>
           <div class="week-notes">
             <div class="note"><strong>Speed / interval option</strong>Use a comfortable run/walk effort; walking breaks
               are encouraged.</div>
-            <div class="note"><strong>Coach's tip</strong>This week backs off a little so your body can adapt.</div>
+            <div class="note"><strong>Helpful Tip</strong>This week backs off a little so your body can adapt.</div>
           </div>
-          <div class="progress-wrap" aria-label="Progress toward 10-mile long run">
+          <div aria-label="Progress toward 10-mile long run" class="progress-wrap">
             <div class="progress-bar" style="width:40%"></div>
           </div>
-          <div class="check-row">
-            <label><input type="checkbox" data-week-check="beginner-11"> Mark week complete</label>
-            <span class="pill">40% of 10-mile goal</span>
+
+          <div class="week-points-row">
+            <span class="pill"><span data-week-points="week-11">0</span> / 90 points earned this week</span>
+            <span class="pill">Daily checkboxes save automatically</span>
           </div>
         </div>
       </section>
-
       <section class="week-card" id="week-12">
-        <div class="week-top" data-toggle-week>
+        <div class="week-top" data-toggle-week="">
           <div class="week-title">
             <div class="week-number">12</div>
             <div>
@@ -850,55 +1245,90 @@
               <div class="day">Mon</div>
               <div class="type">◦ Rest</div>
               <p>Full rest day or light mobility.</p>
+              <label class="day-complete">
+                <input data-day-check="beginner-week-12-mon-1" data-points="5" type="checkbox" />
+
+                <strong>5 pts</strong>
+              </label>
             </article>
             <article class="workout easy">
               <div class="day">Tue</div>
               <div class="type">● Run / Walk Session</div>
               <p>3 mi easy run</p>
+              <label class="day-complete">
+                <input data-day-check="beginner-week-12-tue-2" data-points="15" type="checkbox" />
+
+                <strong>15 pts</strong>
+              </label>
             </article>
             <article class="workout cross">
               <div class="day">Wed</div>
               <div class="type">◆ Walk or Cross-Train</div>
               <p>Cross-train</p>
+              <label class="day-complete">
+                <input data-day-check="beginner-week-12-wed-3" data-points="10" type="checkbox" />
+
+                <strong>10 pts</strong>
+              </label>
             </article>
             <article class="workout easy">
               <div class="day">Thu</div>
               <div class="type">● Easy Session</div>
               <p>3 mi easy run</p>
+              <label class="day-complete">
+                <input data-day-check="beginner-week-12-thu-4" data-points="15" type="checkbox" />
+
+                <strong>15 pts</strong>
+              </label>
             </article>
             <article class="workout rest">
               <div class="day">Fri</div>
               <div class="type">◦ Rest</div>
               <p>Rest</p>
+              <label class="day-complete">
+                <input data-day-check="beginner-week-12-fri-5" data-points="5" type="checkbox" />
+
+                <strong>5 pts</strong>
+              </label>
             </article>
             <article class="workout easy">
               <div class="day">Sat</div>
               <div class="type">● Recovery Session</div>
               <p>2 mi recovery</p>
+              <label class="day-complete">
+                <input data-day-check="beginner-week-12-sat-6" data-points="15" type="checkbox" />
+
+                <strong>15 pts</strong>
+              </label>
             </article>
             <article class="workout long">
               <div class="day">Sun</div>
               <div class="type">★ Long Run / Run-Walk</div>
               <p>5.5 mi long run</p>
+              <label class="day-complete">
+                <input data-day-check="beginner-week-12-sun-7" data-points="25" type="checkbox" />
+
+                <strong>25 pts</strong>
+              </label>
             </article>
           </div>
           <div class="week-notes">
             <div class="note"><strong>Speed / interval option</strong>Use a comfortable run/walk effort; walking breaks
               are encouraged.</div>
-            <div class="note"><strong>Coach's tip</strong>Keep easy days truly easy before the long run grows.</div>
+            <div class="note"><strong>Helpful Tip</strong>Keep easy days truly easy before the long run grows.</div>
           </div>
-          <div class="progress-wrap" aria-label="Progress toward 10-mile long run">
+          <div aria-label="Progress toward 10-mile long run" class="progress-wrap">
             <div class="progress-bar" style="width:55%"></div>
           </div>
-          <div class="check-row">
-            <label><input type="checkbox" data-week-check="beginner-12"> Mark week complete</label>
-            <span class="pill">55% of 10-mile goal</span>
+
+          <div class="week-points-row">
+            <span class="pill"><span data-week-points="week-12">0</span> / 90 points earned this week</span>
+            <span class="pill">Daily checkboxes save automatically</span>
           </div>
         </div>
       </section>
-
       <section class="week-card" id="week-13">
-        <div class="week-top" data-toggle-week>
+        <div class="week-top" data-toggle-week="">
           <div class="week-title">
             <div class="week-number">13</div>
             <div>
@@ -919,56 +1349,91 @@
               <div class="day">Mon</div>
               <div class="type">◦ Rest</div>
               <p>Full rest day or light mobility.</p>
+              <label class="day-complete">
+                <input data-day-check="beginner-week-13-mon-1" data-points="5" type="checkbox" />
+
+                <strong>5 pts</strong>
+              </label>
             </article>
             <article class="workout easy">
               <div class="day">Tue</div>
               <div class="type">● Run / Walk Session</div>
               <p>3 mi easy run</p>
+              <label class="day-complete">
+                <input data-day-check="beginner-week-13-tue-2" data-points="15" type="checkbox" />
+
+                <strong>15 pts</strong>
+              </label>
             </article>
             <article class="workout cross">
               <div class="day">Wed</div>
               <div class="type">◆ Walk or Cross-Train</div>
               <p>Cross-train</p>
+              <label class="day-complete">
+                <input data-day-check="beginner-week-13-wed-3" data-points="10" type="checkbox" />
+
+                <strong>10 pts</strong>
+              </label>
             </article>
             <article class="workout easy">
               <div class="day">Thu</div>
               <div class="type">● Easy Session</div>
               <p>3 mi easy run</p>
+              <label class="day-complete">
+                <input data-day-check="beginner-week-13-thu-4" data-points="15" type="checkbox" />
+
+                <strong>15 pts</strong>
+              </label>
             </article>
             <article class="workout rest">
               <div class="day">Fri</div>
               <div class="type">◦ Rest</div>
               <p>Rest</p>
+              <label class="day-complete">
+                <input data-day-check="beginner-week-13-fri-5" data-points="5" type="checkbox" />
+
+                <strong>5 pts</strong>
+              </label>
             </article>
             <article class="workout easy">
               <div class="day">Sat</div>
               <div class="type">● Recovery Session</div>
               <p>2 mi recovery</p>
+              <label class="day-complete">
+                <input data-day-check="beginner-week-13-sat-6" data-points="15" type="checkbox" />
+
+                <strong>15 pts</strong>
+              </label>
             </article>
             <article class="workout long">
               <div class="day">Sun</div>
               <div class="type">★ Long Run / Run-Walk</div>
               <p>6.0 mi long run</p>
+              <label class="day-complete">
+                <input data-day-check="beginner-week-13-sun-7" data-points="25" type="checkbox" />
+
+                <strong>25 pts</strong>
+              </label>
             </article>
           </div>
           <div class="week-notes">
             <div class="note"><strong>Speed / interval option</strong>Use a comfortable run/walk effort; walking breaks
               are encouraged.</div>
-            <div class="note"><strong>Coach's tip</strong>Use the group plan rhythm: rest, long option, cross-train,
+            <div class="note"><strong>Helpful Tip</strong>Use the group plan rhythm: rest, long option, cross-train,
               easy, recover.</div>
           </div>
-          <div class="progress-wrap" aria-label="Progress toward 10-mile long run">
+          <div aria-label="Progress toward 10-mile long run" class="progress-wrap">
             <div class="progress-bar" style="width:60%"></div>
           </div>
-          <div class="check-row">
-            <label><input type="checkbox" data-week-check="beginner-13"> Mark week complete</label>
-            <span class="pill">60% of 10-mile goal</span>
+
+          <div class="week-points-row">
+            <span class="pill"><span data-week-points="week-13">0</span> / 90 points earned this week</span>
+            <span class="pill">Daily checkboxes save automatically</span>
           </div>
         </div>
       </section>
-
       <section class="week-card" id="week-14">
-        <div class="week-top" data-toggle-week>
+        <div class="week-top" data-toggle-week="">
           <div class="week-title">
             <div class="week-number">14</div>
             <div>
@@ -989,55 +1454,90 @@
               <div class="day">Mon</div>
               <div class="type">◦ Rest</div>
               <p>Full rest day or light mobility.</p>
+              <label class="day-complete">
+                <input data-day-check="beginner-week-14-mon-1" data-points="5" type="checkbox" />
+
+                <strong>5 pts</strong>
+              </label>
             </article>
             <article class="workout easy">
               <div class="day">Tue</div>
               <div class="type">● Run / Walk Session</div>
               <p>3 mi easy run</p>
+              <label class="day-complete">
+                <input data-day-check="beginner-week-14-tue-2" data-points="15" type="checkbox" />
+
+                <strong>15 pts</strong>
+              </label>
             </article>
             <article class="workout cross">
               <div class="day">Wed</div>
               <div class="type">◆ Walk or Cross-Train</div>
               <p>Cross-train</p>
+              <label class="day-complete">
+                <input data-day-check="beginner-week-14-wed-3" data-points="10" type="checkbox" />
+
+                <strong>10 pts</strong>
+              </label>
             </article>
             <article class="workout easy">
               <div class="day">Thu</div>
               <div class="type">● Easy Session</div>
               <p>3 mi easy run</p>
+              <label class="day-complete">
+                <input data-day-check="beginner-week-14-thu-4" data-points="15" type="checkbox" />
+
+                <strong>15 pts</strong>
+              </label>
             </article>
             <article class="workout rest">
               <div class="day">Fri</div>
               <div class="type">◦ Rest</div>
               <p>Rest</p>
+              <label class="day-complete">
+                <input data-day-check="beginner-week-14-fri-5" data-points="5" type="checkbox" />
+
+                <strong>5 pts</strong>
+              </label>
             </article>
             <article class="workout easy">
               <div class="day">Sat</div>
               <div class="type">● Recovery Session</div>
               <p>2 mi recovery</p>
+              <label class="day-complete">
+                <input data-day-check="beginner-week-14-sat-6" data-points="15" type="checkbox" />
+
+                <strong>15 pts</strong>
+              </label>
             </article>
             <article class="workout long">
               <div class="day">Sun</div>
               <div class="type">★ Long Run / Run-Walk</div>
               <p>6.5 mi long run</p>
+              <label class="day-complete">
+                <input data-day-check="beginner-week-14-sun-7" data-points="25" type="checkbox" />
+
+                <strong>25 pts</strong>
+              </label>
             </article>
           </div>
           <div class="week-notes">
             <div class="note"><strong>Speed / interval option</strong>Use a comfortable run/walk effort; walking breaks
               are encouraged.</div>
-            <div class="note"><strong>Coach's tip</strong>Confidence grows from stacking repeatable weeks.</div>
+            <div class="note"><strong>Helpful Tip</strong>Confidence grows from stacking repeatable weeks.</div>
           </div>
-          <div class="progress-wrap" aria-label="Progress toward 10-mile long run">
+          <div aria-label="Progress toward 10-mile long run" class="progress-wrap">
             <div class="progress-bar" style="width:65%"></div>
           </div>
-          <div class="check-row">
-            <label><input type="checkbox" data-week-check="beginner-14"> Mark week complete</label>
-            <span class="pill">65% of 10-mile goal</span>
+
+          <div class="week-points-row">
+            <span class="pill"><span data-week-points="week-14">0</span> / 90 points earned this week</span>
+            <span class="pill">Daily checkboxes save automatically</span>
           </div>
         </div>
       </section>
-
       <section class="week-card" id="week-15">
-        <div class="week-top" data-toggle-week>
+        <div class="week-top" data-toggle-week="">
           <div class="week-title">
             <div class="week-number">15</div>
             <div>
@@ -1058,56 +1558,91 @@
               <div class="day">Mon</div>
               <div class="type">◦ Rest</div>
               <p>Full rest day or light mobility.</p>
+              <label class="day-complete">
+                <input data-day-check="beginner-week-15-mon-1" data-points="5" type="checkbox" />
+
+                <strong>5 pts</strong>
+              </label>
             </article>
             <article class="workout easy">
               <div class="day">Tue</div>
               <div class="type">● Run / Walk Session</div>
               <p>3 mi easy run</p>
+              <label class="day-complete">
+                <input data-day-check="beginner-week-15-tue-2" data-points="15" type="checkbox" />
+
+                <strong>15 pts</strong>
+              </label>
             </article>
             <article class="workout cross">
               <div class="day">Wed</div>
               <div class="type">◆ Walk or Cross-Train</div>
               <p>Cross-train</p>
+              <label class="day-complete">
+                <input data-day-check="beginner-week-15-wed-3" data-points="10" type="checkbox" />
+
+                <strong>10 pts</strong>
+              </label>
             </article>
             <article class="workout easy">
               <div class="day">Thu</div>
               <div class="type">● Easy Session</div>
               <p>3 mi easy run</p>
+              <label class="day-complete">
+                <input data-day-check="beginner-week-15-thu-4" data-points="15" type="checkbox" />
+
+                <strong>15 pts</strong>
+              </label>
             </article>
             <article class="workout rest">
               <div class="day">Fri</div>
               <div class="type">◦ Rest</div>
               <p>Rest</p>
+              <label class="day-complete">
+                <input data-day-check="beginner-week-15-fri-5" data-points="5" type="checkbox" />
+
+                <strong>5 pts</strong>
+              </label>
             </article>
             <article class="workout easy">
               <div class="day">Sat</div>
               <div class="type">● Recovery Session</div>
               <p>2 mi recovery</p>
+              <label class="day-complete">
+                <input data-day-check="beginner-week-15-sat-6" data-points="15" type="checkbox" />
+
+                <strong>15 pts</strong>
+              </label>
             </article>
             <article class="workout long">
               <div class="day">Sun</div>
               <div class="type">★ Long Run / Run-Walk</div>
               <p>7.0 mi long run</p>
+              <label class="day-complete">
+                <input data-day-check="beginner-week-15-sun-7" data-points="25" type="checkbox" />
+
+                <strong>25 pts</strong>
+              </label>
             </article>
           </div>
           <div class="week-notes">
             <div class="note"><strong>Speed / interval option</strong>Use a comfortable run/walk effort; walking breaks
               are encouraged.</div>
-            <div class="note"><strong>Coach's tip</strong>Do not compare yourself to experienced runners. You are
+            <div class="note"><strong>Helpful Tip</strong>Do not compare yourself to experienced runners. You are
               building the same finish line.</div>
           </div>
-          <div class="progress-wrap" aria-label="Progress toward 10-mile long run">
+          <div aria-label="Progress toward 10-mile long run" class="progress-wrap">
             <div class="progress-bar" style="width:70%"></div>
           </div>
-          <div class="check-row">
-            <label><input type="checkbox" data-week-check="beginner-15"> Mark week complete</label>
-            <span class="pill">70% of 10-mile goal</span>
+
+          <div class="week-points-row">
+            <span class="pill"><span data-week-points="week-15">0</span> / 90 points earned this week</span>
+            <span class="pill">Daily checkboxes save automatically</span>
           </div>
         </div>
       </section>
-
       <section class="week-card" id="week-16">
-        <div class="week-top" data-toggle-week>
+        <div class="week-top" data-toggle-week="">
           <div class="week-title">
             <div class="week-number">16</div>
             <div>
@@ -1128,55 +1663,90 @@
               <div class="day">Mon</div>
               <div class="type">◦ Rest</div>
               <p>Full rest day or light mobility.</p>
+              <label class="day-complete">
+                <input data-day-check="beginner-week-16-mon-1" data-points="5" type="checkbox" />
+
+                <strong>5 pts</strong>
+              </label>
             </article>
             <article class="workout easy">
               <div class="day">Tue</div>
               <div class="type">● Run / Walk Session</div>
               <p>2.5 mi easy run</p>
+              <label class="day-complete">
+                <input data-day-check="beginner-week-16-tue-2" data-points="15" type="checkbox" />
+
+                <strong>15 pts</strong>
+              </label>
             </article>
             <article class="workout cross">
               <div class="day">Wed</div>
               <div class="type">◆ Walk or Cross-Train</div>
               <p>Cross-train</p>
+              <label class="day-complete">
+                <input data-day-check="beginner-week-16-wed-3" data-points="10" type="checkbox" />
+
+                <strong>10 pts</strong>
+              </label>
             </article>
             <article class="workout easy">
               <div class="day">Thu</div>
               <div class="type">● Easy Session</div>
               <p>3 mi easy run</p>
+              <label class="day-complete">
+                <input data-day-check="beginner-week-16-thu-4" data-points="15" type="checkbox" />
+
+                <strong>15 pts</strong>
+              </label>
             </article>
             <article class="workout rest">
               <div class="day">Fri</div>
               <div class="type">◦ Rest</div>
               <p>Rest</p>
+              <label class="day-complete">
+                <input data-day-check="beginner-week-16-fri-5" data-points="5" type="checkbox" />
+
+                <strong>5 pts</strong>
+              </label>
             </article>
             <article class="workout easy">
               <div class="day">Sat</div>
               <div class="type">● Recovery Session</div>
               <p>2 mi recovery</p>
+              <label class="day-complete">
+                <input data-day-check="beginner-week-16-sat-6" data-points="15" type="checkbox" />
+
+                <strong>15 pts</strong>
+              </label>
             </article>
             <article class="workout long">
               <div class="day">Sun</div>
               <div class="type">★ Long Run / Run-Walk</div>
               <p>5.5 mi long run</p>
+              <label class="day-complete">
+                <input data-day-check="beginner-week-16-sun-7" data-points="25" type="checkbox" />
+
+                <strong>25 pts</strong>
+              </label>
             </article>
           </div>
           <div class="week-notes">
             <div class="note"><strong>Speed / interval option</strong>Use a comfortable run/walk effort; walking breaks
               are encouraged.</div>
-            <div class="note"><strong>Coach's tip</strong>Long-run patience matters more than pace.</div>
+            <div class="note"><strong>Helpful Tip</strong>Long-run patience matters more than pace.</div>
           </div>
-          <div class="progress-wrap" aria-label="Progress toward 10-mile long run">
+          <div aria-label="Progress toward 10-mile long run" class="progress-wrap">
             <div class="progress-bar" style="width:55%"></div>
           </div>
-          <div class="check-row">
-            <label><input type="checkbox" data-week-check="beginner-16"> Mark week complete</label>
-            <span class="pill">55% of 10-mile goal</span>
+
+          <div class="week-points-row">
+            <span class="pill"><span data-week-points="week-16">0</span> / 90 points earned this week</span>
+            <span class="pill">Daily checkboxes save automatically</span>
           </div>
         </div>
       </section>
-
       <section class="week-card" id="week-17">
-        <div class="week-top" data-toggle-week>
+        <div class="week-top" data-toggle-week="">
           <div class="week-title">
             <div class="week-number">17</div>
             <div>
@@ -1197,56 +1767,91 @@
               <div class="day">Mon</div>
               <div class="type">◦ Rest</div>
               <p>Full rest day or light mobility.</p>
+              <label class="day-complete">
+                <input data-day-check="beginner-week-17-mon-1" data-points="5" type="checkbox" />
+
+                <strong>5 pts</strong>
+              </label>
             </article>
             <article class="workout easy">
               <div class="day">Tue</div>
               <div class="type">● Run / Walk Session</div>
               <p>3 mi easy run</p>
+              <label class="day-complete">
+                <input data-day-check="beginner-week-17-tue-2" data-points="15" type="checkbox" />
+
+                <strong>15 pts</strong>
+              </label>
             </article>
             <article class="workout cross">
               <div class="day">Wed</div>
               <div class="type">◆ Walk or Cross-Train</div>
               <p>Cross-train</p>
+              <label class="day-complete">
+                <input data-day-check="beginner-week-17-wed-3" data-points="10" type="checkbox" />
+
+                <strong>10 pts</strong>
+              </label>
             </article>
             <article class="workout easy">
               <div class="day">Thu</div>
               <div class="type">● Easy Session</div>
               <p>3 mi easy run</p>
+              <label class="day-complete">
+                <input data-day-check="beginner-week-17-thu-4" data-points="15" type="checkbox" />
+
+                <strong>15 pts</strong>
+              </label>
             </article>
             <article class="workout rest">
               <div class="day">Fri</div>
               <div class="type">◦ Rest</div>
               <p>Rest</p>
+              <label class="day-complete">
+                <input data-day-check="beginner-week-17-fri-5" data-points="5" type="checkbox" />
+
+                <strong>5 pts</strong>
+              </label>
             </article>
             <article class="workout easy">
               <div class="day">Sat</div>
               <div class="type">● Recovery Session</div>
               <p>2 mi recovery</p>
+              <label class="day-complete">
+                <input data-day-check="beginner-week-17-sat-6" data-points="15" type="checkbox" />
+
+                <strong>15 pts</strong>
+              </label>
             </article>
             <article class="workout long">
               <div class="day">Sun</div>
               <div class="type">★ Long Run / Run-Walk</div>
               <p>8.0 mi long run</p>
+              <label class="day-complete">
+                <input data-day-check="beginner-week-17-sun-7" data-points="25" type="checkbox" />
+
+                <strong>25 pts</strong>
+              </label>
             </article>
           </div>
           <div class="week-notes">
             <div class="note"><strong>Speed / interval option</strong>Use a comfortable run/walk effort; walking breaks
               are encouraged.</div>
-            <div class="note"><strong>Coach's tip</strong>Back off early if something hurts sharply or changes your
+            <div class="note"><strong>Helpful Tip</strong>Back off early if something hurts sharply or changes your
               stride.</div>
           </div>
-          <div class="progress-wrap" aria-label="Progress toward 10-mile long run">
+          <div aria-label="Progress toward 10-mile long run" class="progress-wrap">
             <div class="progress-bar" style="width:80%"></div>
           </div>
-          <div class="check-row">
-            <label><input type="checkbox" data-week-check="beginner-17"> Mark week complete</label>
-            <span class="pill">80% of 10-mile goal</span>
+
+          <div class="week-points-row">
+            <span class="pill"><span data-week-points="week-17">0</span> / 90 points earned this week</span>
+            <span class="pill">Daily checkboxes save automatically</span>
           </div>
         </div>
       </section>
-
       <section class="week-card" id="week-18">
-        <div class="week-top" data-toggle-week>
+        <div class="week-top" data-toggle-week="">
           <div class="week-title">
             <div class="week-number">18</div>
             <div>
@@ -1267,55 +1872,90 @@
               <div class="day">Mon</div>
               <div class="type">◦ Rest</div>
               <p>Full rest day or light mobility.</p>
+              <label class="day-complete">
+                <input data-day-check="beginner-week-18-mon-1" data-points="5" type="checkbox" />
+
+                <strong>5 pts</strong>
+              </label>
             </article>
             <article class="workout easy">
               <div class="day">Tue</div>
               <div class="type">● Run / Walk Session</div>
               <p>3 mi easy run</p>
+              <label class="day-complete">
+                <input data-day-check="beginner-week-18-tue-2" data-points="15" type="checkbox" />
+
+                <strong>15 pts</strong>
+              </label>
             </article>
             <article class="workout cross">
               <div class="day">Wed</div>
               <div class="type">◆ Walk or Cross-Train</div>
               <p>Cross-train</p>
+              <label class="day-complete">
+                <input data-day-check="beginner-week-18-wed-3" data-points="10" type="checkbox" />
+
+                <strong>10 pts</strong>
+              </label>
             </article>
             <article class="workout easy">
               <div class="day">Thu</div>
               <div class="type">● Easy Session</div>
               <p>3 mi easy run</p>
+              <label class="day-complete">
+                <input data-day-check="beginner-week-18-thu-4" data-points="15" type="checkbox" />
+
+                <strong>15 pts</strong>
+              </label>
             </article>
             <article class="workout rest">
               <div class="day">Fri</div>
               <div class="type">◦ Rest</div>
               <p>Rest</p>
+              <label class="day-complete">
+                <input data-day-check="beginner-week-18-fri-5" data-points="5" type="checkbox" />
+
+                <strong>5 pts</strong>
+              </label>
             </article>
             <article class="workout easy">
               <div class="day">Sat</div>
               <div class="type">● Recovery Session</div>
               <p>2 mi recovery</p>
+              <label class="day-complete">
+                <input data-day-check="beginner-week-18-sat-6" data-points="15" type="checkbox" />
+
+                <strong>15 pts</strong>
+              </label>
             </article>
             <article class="workout long">
               <div class="day">Sun</div>
               <div class="type">★ Long Run / Run-Walk</div>
               <p>9.0 mi long run</p>
+              <label class="day-complete">
+                <input data-day-check="beginner-week-18-sun-7" data-points="25" type="checkbox" />
+
+                <strong>25 pts</strong>
+              </label>
             </article>
           </div>
           <div class="week-notes">
             <div class="note"><strong>Speed / interval option</strong>Use a comfortable run/walk effort; walking breaks
               are encouraged.</div>
-            <div class="note"><strong>Coach's tip</strong>You are close to the main goal. Respect recovery.</div>
+            <div class="note"><strong>Helpful Tip</strong>You are close to the main goal. Respect recovery.</div>
           </div>
-          <div class="progress-wrap" aria-label="Progress toward 10-mile long run">
+          <div aria-label="Progress toward 10-mile long run" class="progress-wrap">
             <div class="progress-bar" style="width:90%"></div>
           </div>
-          <div class="check-row">
-            <label><input type="checkbox" data-week-check="beginner-18"> Mark week complete</label>
-            <span class="pill">90% of 10-mile goal</span>
+
+          <div class="week-points-row">
+            <span class="pill"><span data-week-points="week-18">0</span> / 90 points earned this week</span>
+            <span class="pill">Daily checkboxes save automatically</span>
           </div>
         </div>
       </section>
-
       <section class="week-card" id="week-19">
-        <div class="week-top" data-toggle-week>
+        <div class="week-top" data-toggle-week="">
           <div class="week-title">
             <div class="week-number">19</div>
             <div>
@@ -1336,55 +1976,90 @@
               <div class="day">Mon</div>
               <div class="type">◦ Rest</div>
               <p>Full rest day or light mobility.</p>
+              <label class="day-complete">
+                <input data-day-check="beginner-week-19-mon-1" data-points="5" type="checkbox" />
+
+                <strong>5 pts</strong>
+              </label>
             </article>
             <article class="workout easy">
               <div class="day">Tue</div>
               <div class="type">● Run / Walk Session</div>
               <p>2.5 mi easy run</p>
+              <label class="day-complete">
+                <input data-day-check="beginner-week-19-tue-2" data-points="15" type="checkbox" />
+
+                <strong>15 pts</strong>
+              </label>
             </article>
             <article class="workout cross">
               <div class="day">Wed</div>
               <div class="type">◆ Walk or Cross-Train</div>
               <p>Cross-train</p>
+              <label class="day-complete">
+                <input data-day-check="beginner-week-19-wed-3" data-points="10" type="checkbox" />
+
+                <strong>10 pts</strong>
+              </label>
             </article>
             <article class="workout easy">
               <div class="day">Thu</div>
               <div class="type">● Easy Session</div>
               <p>2 mi easy run</p>
+              <label class="day-complete">
+                <input data-day-check="beginner-week-19-thu-4" data-points="15" type="checkbox" />
+
+                <strong>15 pts</strong>
+              </label>
             </article>
             <article class="workout rest">
               <div class="day">Fri</div>
               <div class="type">◦ Rest</div>
               <p>Rest</p>
+              <label class="day-complete">
+                <input data-day-check="beginner-week-19-fri-5" data-points="5" type="checkbox" />
+
+                <strong>5 pts</strong>
+              </label>
             </article>
             <article class="workout easy">
               <div class="day">Sat</div>
               <div class="type">● Recovery Session</div>
               <p>2 mi recovery</p>
+              <label class="day-complete">
+                <input data-day-check="beginner-week-19-sat-6" data-points="15" type="checkbox" />
+
+                <strong>15 pts</strong>
+              </label>
             </article>
             <article class="workout long">
               <div class="day">Sun</div>
               <div class="type">★ Long Run / Run-Walk</div>
               <p>6.0 mi long run</p>
+              <label class="day-complete">
+                <input data-day-check="beginner-week-19-sun-7" data-points="25" type="checkbox" />
+
+                <strong>25 pts</strong>
+              </label>
             </article>
           </div>
           <div class="week-notes">
             <div class="note"><strong>Speed / interval option</strong>Use a comfortable run/walk effort; walking breaks
               are encouraged.</div>
-            <div class="note"><strong>Coach's tip</strong>Keep the final build smooth and boring.</div>
+            <div class="note"><strong>Helpful Tip</strong>Keep the final build smooth and boring.</div>
           </div>
-          <div class="progress-wrap" aria-label="Progress toward 10-mile long run">
+          <div aria-label="Progress toward 10-mile long run" class="progress-wrap">
             <div class="progress-bar" style="width:60%"></div>
           </div>
-          <div class="check-row">
-            <label><input type="checkbox" data-week-check="beginner-19"> Mark week complete</label>
-            <span class="pill">60% of 10-mile goal</span>
+
+          <div class="week-points-row">
+            <span class="pill"><span data-week-points="week-19">0</span> / 90 points earned this week</span>
+            <span class="pill">Daily checkboxes save automatically</span>
           </div>
         </div>
       </section>
-
       <section class="week-card" id="week-20">
-        <div class="week-top" data-toggle-week>
+        <div class="week-top" data-toggle-week="">
           <div class="week-title">
             <div class="week-number">20</div>
             <div>
@@ -1405,50 +2080,86 @@
               <div class="day">Mon</div>
               <div class="type">◦ Rest</div>
               <p>Full rest day or light mobility.</p>
+              <label class="day-complete">
+                <input data-day-check="beginner-week-20-mon-1" data-points="5" type="checkbox" />
+
+                <strong>5 pts</strong>
+              </label>
             </article>
             <article class="workout long">
               <div class="day">Tue</div>
               <div class="type">★ Run / Walk Session</div>
               <p>Rest or easy walk</p>
+              <label class="day-complete">
+                <input data-day-check="beginner-week-20-tue-2" data-points="25" type="checkbox" />
+
+                <strong>25 pts</strong>
+              </label>
             </article>
             <article class="workout cross">
               <div class="day">Wed</div>
               <div class="type">◆ Walk or Cross-Train</div>
               <p>Cross-train</p>
+              <label class="day-complete">
+                <input data-day-check="beginner-week-20-wed-3" data-points="10" type="checkbox" />
+
+                <strong>10 pts</strong>
+              </label>
             </article>
             <article class="workout easy">
               <div class="day">Thu</div>
               <div class="type">● Easy Session</div>
               <p>2 mi easy run</p>
+              <label class="day-complete">
+                <input data-day-check="beginner-week-20-thu-4" data-points="15" type="checkbox" />
+
+                <strong>15 pts</strong>
+              </label>
             </article>
             <article class="workout rest">
               <div class="day">Fri</div>
               <div class="type">◦ Rest</div>
               <p>Rest</p>
+              <label class="day-complete">
+                <input data-day-check="beginner-week-20-fri-5" data-points="5" type="checkbox" />
+
+                <strong>5 pts</strong>
+              </label>
             </article>
             <article class="workout easy">
               <div class="day">Sat</div>
               <div class="type">● Recovery Session</div>
               <p>2 mi recovery</p>
+              <label class="day-complete">
+                <input data-day-check="beginner-week-20-sat-6" data-points="15" type="checkbox" />
+
+                <strong>15 pts</strong>
+              </label>
             </article>
             <article class="workout long">
               <div class="day">Sun</div>
               <div class="type">★ Long Run / Run-Walk</div>
               <p>10.0 mi goal run</p>
+              <label class="day-complete">
+                <input data-day-check="beginner-week-20-sun-7" data-points="25" type="checkbox" />
+
+                <strong>25 pts</strong>
+              </label>
             </article>
           </div>
           <div class="week-notes">
             <div class="note"><strong>Speed / interval option</strong>Use a comfortable run/walk effort; walking breaks
               are encouraged.</div>
-            <div class="note"><strong>Coach's tip</strong>Celebrate the goal. Run/walk is still a valid way to finish
+            <div class="note"><strong>Helpful Tip</strong>Celebrate the goal. Run/walk is still a valid way to finish
               ten miles.</div>
           </div>
-          <div class="progress-wrap" aria-label="Progress toward 10-mile long run">
+          <div aria-label="Progress toward 10-mile long run" class="progress-wrap">
             <div class="progress-bar" style="width:100%"></div>
           </div>
-          <div class="check-row">
-            <label><input type="checkbox" data-week-check="beginner-20"> Mark week complete</label>
-            <span class="pill">100% of 10-mile goal</span>
+
+          <div class="week-points-row">
+            <span class="pill"><span data-week-points="week-20">0</span> / 100 points earned this week</span>
+            <span class="pill">Daily checkboxes save automatically</span>
           </div>
         </div>
       </section>
@@ -1457,6 +2168,7 @@
   <footer class="footer">Built from the uploaded training spreadsheet • Print-friendly • Progress saves in this browser
   </footer>
   <script src="js/app.js"></script>
+  <script src="js/points.js"></script>
 </body>
 
 </html>
